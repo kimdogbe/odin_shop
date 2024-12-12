@@ -14,7 +14,7 @@ function App() {
             <Link to="about">About</Link>
           </li>
           <li>
-            <Link to="Shop">Shop</Link>
+            <Link to="shop">Shop</Link>
           </li>
           <li>
             <Link to="checkout">Checkout</Link>
