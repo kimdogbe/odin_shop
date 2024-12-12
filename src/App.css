@@ -6,6 +6,7 @@
   margin: 0 auto;
   text-align: center;
   width: 100vw;
+  display: grid;
 }
 
 .logo {
@@ -50,12 +51,15 @@ nav ul{
   align-items: center;
   background-color: #8888881f;
   width: 100%;
-  padding: 0em 1em;
+  padding: 0.5em 1em;
+  margin: 0px;
 }
 
 nav ul li {
   list-style: none;
   padding: 10px;
+  text-decoration: none;
+  color: #f9f9f9;
 }
 
 #home-btn {
