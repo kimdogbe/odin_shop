@@ -12,8 +12,21 @@ function Shop() {
 
   function handleAdd(productId) {
     if (!cart.find((p) => p.id === productId)) {
-      const product = products.find((p) => p.id === productId)
+      let product = products.find((p) => p.id === productId)
+      product['count'] = 1
       setCart([...cart, product])
+    }
+    else {
+      const nextCart = cart.map(item => {
+        if (item.id === productId){
+          return {...item, count: item.count + 1 }
+        }
+        else {
+          return item
+        }
+      })
+
+      setCart(nextCart)
     }
   }
 
