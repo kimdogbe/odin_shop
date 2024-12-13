@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import stool from "../assets/stool.jpg"
 import AddButton from "./AddBtn"
 
@@ -12,6 +13,13 @@ function ProductCard({ name="High Stool", description="Sweedish designed high st
       <AddButton text="Add to Cart"/>
     </div>
   </div>
+}
+
+ProductCard.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.string
 }
 
 export default ProductCard
