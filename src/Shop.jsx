@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom"
 import ProductCard from "./components/ProductCard"
 import { useState, useEffect } from "react";
+import { useOutletContext } from "react-router-dom"
 
 function Shop() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [cart, setCart] = useOutletContext();
+
+  function handleAdd(productId) {
+    if (!cart.find((p) => p.id === productId)) {
+      const product = products.find((p) => p.id === productId)
+      setCart([...cart, product])
+    }
+  }
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -35,10 +45,12 @@ function Shop() {
         {products.map(product => 
           <ProductCard 
             key={product.id} 
+            id={product.id}
             name={product.title} 
             description={product.description} 
             image={product.image}
-            price={product.price}  
+            price={product.price} 
+            handleAdd={id => handleAdd(id)} 
           />
         )
         }

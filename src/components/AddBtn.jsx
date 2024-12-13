@@ -1,7 +1,14 @@
+import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 
-function AddButton({ to, btnType = 'generalBtn', text = 'Click me' }) {
-  return <Link to={to}> <button className={btnType} >{text}</button></Link>
+function AddButton({ btnType = 'generalBtn', text = 'Click me', clickHandler}) {
+  return <button onClick={clickHandler} className={btnType} >{text}</button>
+}
+
+AddButton.propTypes = {
+  btnType: PropTypes.string,
+  text: PropTypes.string,
+  clickHandler: PropTypes.func,
 }
 
 export default AddButton

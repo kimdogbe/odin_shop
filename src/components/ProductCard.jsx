@@ -2,7 +2,8 @@ import PropTypes from "prop-types"
 import stool from "../assets/stool.jpg"
 import AddButton from "./AddBtn"
 
-function ProductCard({ name="High Stool", description="Sweedish designed high stool", image=stool, price="1" }) {
+function ProductCard({ id, name="High Stool", description="Sweedish designed high stool", image=stool, price="1", handleAdd }) {
+  
   return <div className="product">
     <img src={image} alt={description} />
     <div>
@@ -10,16 +11,18 @@ function ProductCard({ name="High Stool", description="Sweedish designed high st
     </div>
     <div className="add-to-cart">
       <p>£{price}</p>
-      <AddButton text="Add to Cart"/>
+      <AddButton text="Add to Cart" clickHandler={() => handleAdd(id)}/>
     </div>
   </div>
 }
 
 ProductCard.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  price: PropTypes.string
+  price: PropTypes.number,
+  handleAdd: PropTypes.func
 }
 
 export default ProductCard
