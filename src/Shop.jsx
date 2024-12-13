@@ -9,20 +9,9 @@ function Shop() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      // let tempList = []
       try {
-          const response = await fetch("https://fakestoreapi.com/products?limit=5");
+          const response = await fetch("https://fakestoreapi.com/products?limit=12");
           const data = await response.json();
-          // const body = data.data;
-          // tempList = 
-          //   [...tempList, 
-          //     { id: body.id, 
-          //       name: body.title,
-          //       artist: body.artist_title,
-          //       type: body.department_title,
-          //       image: imageEndpoint.replace('{identifier}', body.image_id)
-          //     }
-          //   ];
         setProducts(data);
         console.log(data);
       } catch (err) {
@@ -34,6 +23,9 @@ function Shop() {
 
     fetchUsers();
   }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
@@ -50,11 +42,6 @@ function Shop() {
           />
         )
         }
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </div>
     </div>
   )
