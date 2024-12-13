@@ -1,5 +1,5 @@
-import Button from "./AddBtn"
 import stool from "../assets/stool.jpg"
+import AddButton from "./AddBtn"
 
 function ProductCard({ name="High Stool", description="Sweedish designed high stool", image=stool, price="£1" }) {
   return <div className="product">
@@ -10,7 +10,7 @@ function ProductCard({ name="High Stool", description="Sweedish designed high st
       <p>{price}</p>
     </div>
 
-    <Button text="Add to Cart"/>
+    <AddButton text="Add to Cart"/>
   </div>
 }
 
