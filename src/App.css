@@ -81,7 +81,7 @@ nav ul li {
 }
 
 .product img {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px 10px 0px 0px;
   height: 10rem;
 }

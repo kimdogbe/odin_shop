@@ -5,7 +5,7 @@ function ProductCard({ name="High Stool", description="Sweedish designed high st
   return <div className="product">
     <img src={image} alt={description} />
     <div>
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       <p>{description}</p>
       <p>{price}</p>
     </div>
