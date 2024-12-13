@@ -6,7 +6,12 @@ function Shop() {
     <div>
       <h1>Shop page</h1>
       <p>Browse from our products below!</p>
-      <ProductCard />
+      <div className="products">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
     </div>
   )
 }
