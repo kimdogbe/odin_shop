@@ -69,9 +69,10 @@ nav ul li {
 .product {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-align: left;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: white;
   color: #888;
   width: 20rem;
 }
@@ -96,7 +97,7 @@ nav ul li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
-  align-items: center;
+  align-items: stretch;
   justify-items: center;
   padding: 1em;
 }
