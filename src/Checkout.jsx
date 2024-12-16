@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useOutletContext } from "react-router-dom";
 import NumberInput from "./components/NumberInput";
-import AddButton from "./components/AddBtn";
+import AddButton from "./components/Button";
 
 function Checkout() {
   const [cart, setCart] = useOutletContext();

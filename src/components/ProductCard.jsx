@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import stool from "../assets/stool.jpg"
-import AddButton from "./AddBtn"
+import AddButton from "./Button"
 
 function ProductCard({ id, name="High Stool", description="Sweedish designed high stool", image=stool, price="1", handleAdd }) {
   
