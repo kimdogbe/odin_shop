@@ -101,3 +101,33 @@ nav ul li {
   justify-items: center;
   padding: 1em;
 }
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+}
+
+.cart-item img {
+  object-fit: contain;
+  height: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-item {
+    width: 90%;
+  }
+}
