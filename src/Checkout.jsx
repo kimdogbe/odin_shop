@@ -1,11 +1,41 @@
 import { Link } from "react-router-dom"
 import { useOutletContext } from "react-router-dom";
+import NumberInput from "./components/NumberInput";
+import AddButton from "./components/AddBtn";
 
 function Checkout() {
   const [cart, setCart] = useOutletContext();
 
-  console.log("Checkout:")
-  console.log(cart);
+  function handleIncrement(productId){
+    const nextCart = cart.map(item => {
+      if (item.id === productId){
+        return {...item, count: item.count + 1 }
+      }
+      else {
+        return item
+      }
+    })
+
+    setCart(nextCart)
+  }
+
+  function handleDecrement(productId){
+    const nextCart = cart.map(item => {
+      if (item.id === productId){
+        return {...item, count: item.count > 1 ? item.count - 1 : 1 }
+      }
+      else {
+        return item
+      }
+    })
+
+    setCart(nextCart)
+  }
+
+  function handleRemove(productId) {
+    const nextCart = cart.filter(item => item.id !== productId)
+    setCart(nextCart)
+  }
   
 
   return (
@@ -19,6 +49,11 @@ function Checkout() {
             <p>{item.title}</p>
             <p>£{item.price} x {item.count}</p>
             <p>Total: £{(item.price * item.count).toFixed(2)}</p>
+            <NumberInput count={item.count} 
+            handleDecrement={() => handleDecrement(item.id)}
+            handleIncrement={() => handleIncrement(item.id)}
+            />
+            <AddButton text="Remove" clickHandler={() => handleRemove(item.id)} />
           </div>
         )
       }
