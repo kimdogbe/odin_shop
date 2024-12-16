@@ -11,10 +11,7 @@ function App() {
     <div>
       <nav>
         <ul>
-          <h2>Kays Shop</h2>
-          <li id='home-btn'>
-            <Link to="home">Home page</Link>
-          </li>
+          <Link id='home-logo' to="/"><h2>Kays Shop</h2></Link>
           <li>
             <Link to="about">About</Link>
           </li>
