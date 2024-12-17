@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > app snapshot 1`] = `
+<div>
+  <div>
+    <nav>
+      <ul>
+        <a
+          data-discover="true"
+          href="/"
+          id="home-logo"
+        >
+          <h2>
+            Kays Shop
+          </h2>
+        </a>
+        <li>
+          <a
+            data-discover="true"
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/shop"
+          >
+            Shop
+          </a>
+        </li>
+        <li>
+          <a
+            data-discover="true"
+            href="/checkout"
+          >
+            Checkout
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Home component > home page snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      Hello and welcome to our store!
+    </h1>
+    <p>
+      We hope you find what you're looking for
+    </p>
+    <a
+      data-discover="true"
+      href="/shop"
+    >
+       
+      <button>
+        Shop
+      </button>
+    </a>
+  </div>
+</div>
+`;
