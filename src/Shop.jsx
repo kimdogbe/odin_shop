@@ -51,7 +51,7 @@ function Shop() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div>
+    <div id="shop-section">
       <h1>Shop page</h1>
       <p>Browse from our products below!</p>
       <div className="products">

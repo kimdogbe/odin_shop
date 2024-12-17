@@ -64,9 +64,7 @@ nav ul li {
 
 .main-content {
   display: flex;
-  height: 100%;
   justify-content: center;
-  align-items: stretch;
 }
 
 #home-logo {
@@ -84,6 +82,10 @@ nav ul li {
   width: 90%;
   height: 80vh;
   margin-top: 1rem;
+}
+
+#shop-section {
+  width: 100%;
 }
 
 .product {
@@ -129,6 +131,7 @@ nav ul li {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  width: 100%;
 }
 
 .cart-item {
