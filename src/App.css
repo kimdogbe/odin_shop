@@ -108,6 +108,7 @@ nav ul li {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .cart-item {
@@ -120,6 +121,17 @@ nav ul li {
   background-color: white;
   border-radius: 10px;
   color: black;
+}
+
+.cart-item-detail {
+  flex: 1;
+  text-align: left;
+}
+
+.cart-item-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-item img {

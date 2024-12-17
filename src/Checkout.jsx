@@ -46,14 +46,18 @@ function Checkout() {
         cart.map(item => 
           <div className="cart-item" key={item.id}>
             <img src={item.image} alt={item.title} />
-            <p>{item.title}</p>
-            <p>£{item.price} x {item.count}</p>
-            <p>Total: £{(item.price * item.count).toFixed(2)}</p>
-            <NumberInput count={item.count} 
-            handleDecrement={() => handleDecrement(item.id)}
-            handleIncrement={() => handleIncrement(item.id)}
-            />
-            <AddButton text="Remove" clickHandler={() => handleRemove(item.id)} />
+            <div className="cart-item-detail">
+              <p>{item.title}</p>
+              <p>£{item.price} x {item.count}</p>
+              <p>Total: £{(item.price * item.count).toFixed(2)}</p>
+            </div>
+            <div className="cart-item-buttons">
+              <NumberInput count={item.count} 
+              handleDecrement={() => handleDecrement(item.id)}
+              handleIncrement={() => handleIncrement(item.id)}
+              />
+              <AddButton text="Remove" clickHandler={() => handleRemove(item.id)} />
+            </div>
           </div>
         )
       }
