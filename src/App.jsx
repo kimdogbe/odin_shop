@@ -19,7 +19,7 @@ function App() {
             <Link to="shop">Shop</Link>
           </li>
           <li>
-            <Link to="checkout">Checkout</Link>
+            <Link to="checkout">Checkout ({cart.length})</Link>
           </li>
         </ul>
       </nav>
