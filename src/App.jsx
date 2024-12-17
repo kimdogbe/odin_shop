@@ -23,7 +23,9 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Outlet context={[cart, setCart]} />
+      <div className='main-content'>
+        <Outlet context={[cart, setCart]} />
+      </div>
     </div>
   )
 }
