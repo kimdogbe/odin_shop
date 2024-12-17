@@ -11,7 +11,7 @@ function ProductCard({ id, name="High Stool", description="Sweedish designed hig
     </div>
     <div className="add-to-cart">
       <p>£{price}</p>
-      <AddButton text="Add to Cart" clickHandler={() => handleAdd(id)}/>
+      <AddButton btnType="cart-add-btn" text="Add to Cart" clickHandler={() => handleAdd(id)}/>
     </div>
   </div>
 }
